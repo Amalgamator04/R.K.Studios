@@ -237,17 +237,19 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html" class="logo"><img src="logo.png" alt="LOGO">LOGO</a>
+            <a href="index.html" class="logo"><img src="images\logo.jpg" alt="LOGO"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="Gallery.html">GALLERY</a></li>
-                    <li><a href="Contact.html">CONTACT</a></li>
-                    <li><a href="Offers.html">SPECIAL OFFERS</a></li>
+                    <li><a href="Product_page_try.html">PRODUCT PAGE</a></li>
+                    <li><a href="Offers.html">SPECIAL OFFERS</a>
+                    <li><a href="Contact.html">CONTACT</a>>
                 </ul>
             </div>
         </nav>
+        <br><br>
         <div class="text-box">
             <h1>Contact Us</h1>
             <p>We’re here to help and answer any questions you might have.</p>
@@ -259,36 +261,64 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h2>Contact Information</h2>
-                <p><span>Address:</span> 123 Fashion Street, New York, NY 10001</p>
-                <p><span>Phone:</span> (123) 456-7890</p>
-                <p><span>Email:</span> <a href="mailto:info@clothingbrand.com">info@clothingbrand.com</a></p>
-                <p><span>Working Hours:</span> Mon - Fri, 9:00 AM - 6:00 PM</p>
+                <p><span>Address:</span>R. K Photos studio , RZ -E 13 gandhi market west sagar pur</p>
+                <p><span>Phone:</span> +91 8743881159</p>
+                <p><span>Email:</span> <a href="mailto:sonueditorz874388@gmail.com">sonueditorz874388@gmail.com</a></p>
+                <p><span>Working Hours:</span> 24*7 </p>
             </div>
             <div class="contact-form">
                 <h2>Send Us a Message</h2>
-                <form action="https://formspree.io/f/xblrlnrk" method="POST">
+                <form action="https://formspree.io/f/xnnqzlne" method="POST">
+                    <!-- Name Field -->
                     <div class="input-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
                     </div>
+
+                    <!-- Number Field -->
+                    <div class="input-group">
+                        <label for="number">Your Number</label>
+                        <input type="tel" id="number" name="number" placeholder="Enter Your Number" pattern="[0-9]{10}"
+                            required>
+                    </div>
+
+                    <!-- Email Field -->
                     <div class="input-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
                     </div>
+
+                    <!-- What Are You Looking For? Dropdown -->
+                    <div class="input-group">
+                        <label for="looking-for">What Are You Looking For?</label>
+                        <select id="looking-for" name="looking-for" required>
+                            <option value="">Select an Option</option>
+                            <option value="personal-portfolio">Personal Portfolio</option>
+                            <option value="event-photography">Event Photography</option>
+                            <option value="professional-videography">Professional Videography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message Field -->
                     <div class="input-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6"
+                            required></textarea>
                     </div>
+
+                    <!-- Submit Button -->
                     <button type="submit">Send Message</button>
                 </form>
             </div>
+
         </div>
     </section>
 
     <footer>
-        <p>Contact Handler: John Doe</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+        <p>Contact Handler: Sonu Gupta</p>
+        <p>Phone: +91 8743881159</p>
+        <p>Email: <a href="mailto:sonueditorz874388@gmail.com">sonueditorz874388@gmail.com</a></p>
         <div class="social-icons">
             <a href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook-f"></i></a>

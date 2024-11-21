@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo_graph site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playwrite HR', cursive;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background: radial-gradient(rgb(40, 159, 189), rgb(33, 75, 94));
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .floating-images img {
+            position: absolute;
+            width: 100px;
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        .floating-images img:nth-child(1) {
+            top: 10%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .floating-images img:nth-child(2) {
+            top: 25%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-images img:nth-child(3) {
+            bottom: 20%;
+            left: 5%;
+            animation-delay: 1s;
+        }
+
+        .floating-images img:nth-child(4) {
+            bottom: 10%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        .floating-images img:nth-child(5) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 1.5s;
+        }
+
+        .floating-images img:nth-child(6) {
+            top: 40%;
+            right: 20%;
+            animation-delay: 2.5s;
+        }
+
+        .floating-images img:nth-child(7) {
+            bottom: 30%;
+            right: 30%;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin: auto;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            backdrop-filter: blur(30px);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 20px;
+        }
+
+        .nav-links ul li a {
+            transition: color 0.6s;
+        }
+
+        .nav-links ul li a:hover {
+            color: #bd7018;
+            font-weight: 800;
+            border-color: #bd7018;
+            border-style: dotted;
+        }
+
+        .text-box {
+            color: #ffffff;
+            max-width: 1200px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .text-box h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 20px;
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid;
+            padding: 12px 34px;
+            background: transparent;
+            font-size: 15px;
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .hero-btn:hover {
+            border: 1px solid rgb(202, 145, 22);
+            background-color: rgb(202, 145, 22);
+            transition: 1s;
+        }
+
+        .course {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .course h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .course p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .course .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .course-col {
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .course-col h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .course-col p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .course-col:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <div class="floating-images">
+            <img src="image1.png" alt="Floating Image 1">
+            <img src="image2.png" alt="Floating Image 2">
+            <img src="image3.png" alt="Floating Image 3">
+            <img src="image4.png" alt="Floating Image 4">
+            <img src="image5.png" alt="Floating Image 5">
+            <img src="image6.png" alt="Floating Image 6">
+            <img src="image7.png" alt="Floating Image 7">
+        </div>
+        <nav>
+            <a href="index.html" class="logo"><img src="blog-shape.png" alt="LOGO">LOGO</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="Gallery.html">GALLERY</a></li>
+                    <li><a href="Product_page_try.html">Product Page</a></li>
+                    <li><a href="Offers.html">SPECIAL OFFERS</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>R.K. Studios</h1>
+            <p>Welcome to our premier photo studio, where we bring your moments to life with unparalleled creativity and professionalism. Whether it's a wedding or personal project, we are here to capture the essence of your story in every frame.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+    <!-------------------Categories-->
+    <section class="course">
+        <h2>SERVICES</h2>
+        <p>Explore our diverse range of photography and videography services for all occasions.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Personal Portfolio</h3>
+                <p>Showcase your unique style with personalized portfolio photoshoots.</p>
+            </div>
+            <div class="course-col">
+                <h3>Event Photography</h3>
+                <p>Capture every memorable moment of your events with professional photography.</p>
+            </div>
+            <div class="course-col">
+                <h3>Professional Videography</h3>
+                <p>Craft high-quality videos to bring your stories to life with cinematic visuals.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 R.K. Studios. All Rights Reserved.</p>
+        <p>Designed with ❤️ by R.K. Studios Team</p>
+    </footer>
+</body>
+
+</html>
