@@ -1,0 +1,285 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playwrite HR', cursive;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #164c82;
+}
+
+.header {
+    min-height: 60vh;
+    width: 100%;
+    background: linear-gradient(45deg, #264653, #2a9d8f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav a.logo img {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    
+}
+
+.nav-links ul li a:hover {
+    color: #e9c46a;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, filter 0.5s ease;
+}
+
+section.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+section img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Section Container */
+.container {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .product {
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container .product:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 40px 20px;
+    background-color: #264653;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 32px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery-card {
+        width: calc(50% - 20px);
+    }
+
+    .photo-gallery h2 {
+        font-size: 28px;
+    }
+
+    .photo-gallery p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-card {
+        width: calc(100% - 20px);
+    }
+
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .text-box p {
+        font-size: 12px;
+    }
+}
+
+/* Mobile Toggle */
+@media screen and (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 20px 0;
+        background-color: #000000;
+        border-radius: 20px;
+    }
+
+    .nav-links.active ul {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 28px;
+        z-index: 9999;
+        
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
+        background-color: #ffffff;
+        border-radius: 2px;
+    }
+    .nav-links ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0px 15px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        border-radius: 5px;
+        background-color: rgb(70, 72, 74);
+    }
+}
+
+/* Floating squares effect */
+.floating-squares {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.floating-squares .square {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    animation: float-squares 15s infinite;
+    opacity: 0.9;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8),
+                0 0 20px 10px rgba(255, 223, 88, 0.8),
+                0 0 30px 15px rgba(255, 148, 55, 0.6);
+}
+
+/* Randomize starting positions and delays for squares */
+.floating-squares .square:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.floating-squares .square:nth-child(2) { top: 40%; left: 10%; animation-delay: 2s; }
+.floating-squares .square:nth-child(3) { top: 80%; left: 50%; animation-delay: 4s; }
+.floating-squares .square:nth-child(4) { top: 30%; left: 70%; animation-delay: 6s; }
+.floating-squares .square:nth-child(5) { top: 60%; left: 30%; animation-delay: 8s; }
+
+.floating-squares .square:nth-child(6) { top: 5%; left: 15%; animation-delay: 2s; }
+.floating-squares .square:nth-child(7) { top: 50%; left: 80%; animation-delay: 6s; }
+.floating-squares .square:nth-child(8) { top: 70%; left: 60%; animation-delay: 3s; }
+.floating-squares .square:nth-child(9) { top: 40%; left: 40%; animation-delay: 7s; }
+.floating-squares .square:nth-child(10) { top: 85%; left: 25%; animation-delay: 5s; }
+
+/* Animation for floating squares */
+@keyframes float-squares {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px) scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.9),
+                    0 0 30px 15px rgba(255, 223, 88, 0.9),
+                    0 0 45px 22px rgba(255, 148, 55, 0.8);
+    }
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.9;
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8),
+                    0 0 20px 10px rgba(255, 223, 88, 0.8),
+                    0 0 30px 15px rgba(255, 148, 55, 0.6);
+    }
+}

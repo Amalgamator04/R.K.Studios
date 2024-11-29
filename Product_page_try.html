@@ -5,172 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page - Photo Frames</title>
-    <style>
-        /* Common Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Playwrite HR', cursive;
-        }
-
-        body {
-            overflow-x: hidden;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .header {
-            min-height: 60vh;
-            width: 100%;
-            background: linear-gradient(45deg, #264653, #2a9d8f);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            color: #ffffff;
-            border-radius: 25px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 60px;
-            padding: 10px 20px;
-            position: absolute;
-            top: 0;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-        }
-
-        nav a.logo img {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-        }
-
-        .nav-links ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 10px 15px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .nav-links ul li a:hover {
-            color: #e9c46a;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 100px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            transition: transform 0.3s ease, filter 0.5s ease;
-        }
-
-        section.hidden {
-            opacity: 0;
-            transform: translateY(100px);
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-        }
-
-        section img {
-            max-width: 300px;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #264653;
-        }
-
-        section p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        /* Section Container */
-        .container {
-            max-width: 1300px;
-            display: flex;
-            justify-content:space-around;
-            flex-wrap: wrap;
-        }
-
-        .container .product {
-            margin: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .container .product:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 20px;
-            background-color: #264653;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        /* Animation */
-        @keyframes pop {
-            0% {
-                transform: scale(0.9);
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .container .product:hover img {
-            animation: pop 0.4s ease forwards;
-        }
-    </style>
+ <link rel="stylesheet" href="Product_Page.css">
 </head>
 
 <body>
     <section class="header">
+        
         <nav>
-            <a href="#" class="logo"><img src="images\logo.jpg" alt=""></a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="#" class="logo"><img src="images/logo.jpg" alt=""></a>
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="Gallery.html">GALLERY</a></li>
                     <li><a href="Product_page_try.html">PRODUCT PAGE</a></li>
-                    <li><a href="Offers.html">SPECIAL OFFERS</a>
-                    <li><a href="Contact.html">CONTACT</a>
+                    <li><a href="Offers.html">SPECIAL OFFERS</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
@@ -186,26 +41,26 @@
         <p>Beautifully crafted photo frames to cherish your moments.</p>
         <div class="container">
             <div class="product">
-                <img src="images\Frame1(full).jpg" alt="Photo Frame 1">
-                <img src="images\Frame1(side).jpg" alt="">
+                <img src="images/Frame1(full).jpg" alt="Photo Frame 1">
+                <img src="images/Frame1(side).jpg" alt="Side view of Photo Frame 1">
                 <p>Classic Wooden Frame</p>
             </div>
             <div class="product">
-                <img src="images\Frame3(full).jpg" alt="Photo Frame 2">
-                <img src="images\Frame3(side).jpg" alt="Photo Frame 2">
+                <img src="images/Frame3(full).jpg" alt="Photo Frame 2">
+                <img src="images/Frame3(side).jpg" alt="Side view of Photo Frame 2">
                 <p>Shining Laser</p>
             </div>
         </div>
 
         <div class="container">
             <div class="product">
-                <img src="images\Framw2.jpg" alt="Photo Frame 1">
-                <img src="images\Frame2(side).jpg" alt="">
+                <img src="images/Framw2.jpg" alt="Photo Frame 3">
+                <img src="images/Frame2(side).jpg" alt="Side view of Photo Frame 3">
                 <p>Golden Wave</p>
             </div>
             <div class="product">
-                <img src="images\Frame4(full).jpg" alt="Photo Frame 2">
-                <img src="images\Frame4(side).jpg" alt="Photo Frame 2">
+                <img src="images/Frame4(full).jpg" alt="Photo Frame 4">
+                <img src="images/Frame4(side).jpg" alt="Side view of Photo Frame 4">
                 <p>White Dragon</p>
             </div>
         </div>
@@ -217,13 +72,13 @@
         <p>Customized photo mugs to start your day with a smile.</p>
         <div class="container">
             <div class="product">
-                <img src="images\Mug1.jpg" alt="Photo Mug 1">
-                <img src="images\Mug2.jpg" alt="Photo Mug 1">
+                <img src="images/Mug1.jpg" alt="Photo Mug 1">
+                <img src="images/Mug2.jpg" alt="Side view of Photo Mug 1">
                 <p>Personalized Coffee Mug</p>
             </div>
             <div class="product">
-                <img src="images\magic cup1.jpg" alt="Photo Mug 2">
-                <img src="images\magic cup2.jpg" alt="Photo Mug 1">
+                <img src="images/magic cup1.jpg" alt="Magic Photo Mug 1">
+                <img src="images/magic cup2.jpg" alt="Magic Photo Mug 2">
                 <p>Color Changing Mug</p>
             </div>
         </div>
@@ -235,35 +90,37 @@
         <p>Cozy cushions with your favorite photos printed.</p>
         <div class="container">
             <div class="product">
-                <img src="images\cusion1.jpg" alt="Photo Cushion 1">
-                <img src="images\Cusion2.jpg" alt="Photo Cushion 1">
+                <img src="images/cusion1.jpg" alt="Photo Cushion 1">
+                <img src="images/Cusion2.jpg" alt="Side view of Photo Cushion 1">
                 <p>Square Photo Cushion</p>
             </div>
             <div class="product">
-                <img src="images\heart_cusion1.jpg" alt="Photo Cushion 2">
-                <img src="images\heart_cusion2.jpg" alt="Photo Cushion 1">
+                <img src="images/heart_cusion1.jpg" alt="Heart-shaped Photo Cushion 1">
+                <img src="images/heart_cusion2.jpg" alt="Heart-shaped Photo Cushion 2">
                 <p>Heart-Shaped Cushion</p>
             </div>
         </div>
     </section>
 
-    <section class="section-cushion hidden" id="cushions">
+    <!-- Photo Cases Section -->
+    <section class="section-cushion hidden" id="cases">
         <h2>Photo Cases</h2>
         <p>Cases with your favorite photos printed.</p>
         <div class="container">
             <div class="product">
-                <img src="images\Case1.jpg" alt="Photo Cushion 1">
-                <img src="images\Case2.jpg" alt="Photo Cushion 1">
-                <p>Square Photo Cases</p>
+                <img src="images/Case1.jpg" alt="Photo Case 1">
+                <img src="images/Case2.jpg" alt="Side view of Photo Case 1">
+                <p>Square Photo Case</p>
             </div>
         </div>
+        
     </section>
-
 
     <footer>
         <p>&copy; 2024 Photo Products. All rights reserved.</p>
     </footer>
-
+   
+    
     <script>
         const sections = document.querySelectorAll('section.hidden');
 
@@ -279,6 +136,35 @@
         sections.forEach(section => {
             observer.observe(section);
         });
+    </script>
+ <div class="floating-squares">
+    <!-- Add 20 floating squares -->
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>
+<script>const navToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
     </script>
 </body>
 
