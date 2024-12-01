@@ -41,9 +41,10 @@ backdrop-filter: blur(10px);
 }
 
 nav a.logo img {
-height: 50px;
-width: 50px;
+height: 60px;
+width: 60px;
 padding: 10px;
+border-radius: 50px;
 }
 
 .nav-links {
@@ -457,10 +458,9 @@ font-size: 14px;
     }
 }
 
-/* For Very Small Devices (Mobile Portrait) */
-/* For Very Small Devices (Mobile Portrait) */
+
 @media screen and (max-width: 480px) {
-    /* Header section */
+    
     .header {
         min-height: 60vh;
     }

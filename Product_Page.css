@@ -39,9 +39,10 @@ nav {
 }
 
 nav a.logo img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
+    border-radius: 50px;
 }
 
 .nav-links ul {
