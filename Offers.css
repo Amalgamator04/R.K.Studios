@@ -2,11 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playwrite HR', cursive;
+    
+}
+font-face {
+    font-family: 'CustomFont';
+    src: url('f24q224-bonger-bonger-regular-400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the font to the whole body or specific elements */
+
+body {
+    overflow-x: hidden;
+    font-family: 'CustomFont';
 }
 
 body {
     overflow-x: hidden;
+    font-family: 'CustomFont', sans-serif;
 }
 
 .header {
@@ -86,13 +100,13 @@ nav a {
 }
 
 .text-box h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
 .text-box p {
     margin: 10px 0 40px;
-    font-size: 18px;
+    font-size: 25px;
     color: #000000;
     font-weight:400;
 }
@@ -164,7 +178,7 @@ nav a {
 }
 
 .category-col p {
-    font-size: 14px;
+    font-size: 20pxpx;
     color: #ffffff;
 }
 
@@ -173,10 +187,53 @@ nav a {
 }
 
 .category-col img {
-    width: 100px;
+    width: 250px;
     height: auto;
     margin-bottom: 20px;
 }
+
+.contact-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-us h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-btn {
+    text-decoration: none;
+    background-color: #ff6347;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #e5533c;
+}
+
 /* Adjusting for smaller screens */
 @media (max-width: 700px) {
     .text-box h1 {
@@ -295,6 +352,7 @@ nav a {
         color: #ffffff;
         max-width: 1200px;
         backdrop-filter: blur(20px);
+        font-size: 50px;
         padding: 20px;
         border-radius: 20px;
     }
