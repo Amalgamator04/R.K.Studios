@@ -22,7 +22,7 @@ body {
     background-image: radial-gradient(rgb(40, 159, 189), rgb(33, 75, 94));
     background-image: url('Photoshoot Backdrop Ideas & Poses.jpeg');
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     position: relative;
 }
 
@@ -150,13 +150,22 @@ nav a {
     border-radius: 20px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
-    width: calc(33.33% - 30px);
+    width: calc(100% - 40px); /* Mobile first */
     text-align: center;
     overflow: hidden;
     position: relative;
     background-color: transparent;
 }
-
+@media (min-width: 600px) {
+    .gallery-card {
+        width: calc(50% - 20px);
+    }
+}
+@media (min-width: 900px) {
+    .gallery-card {
+        width: calc(33.33% - 30px);
+    }
+}
 .gallery-card img {
     width: 100%;
     border-radius: 20px 20px 0 0;

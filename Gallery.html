@@ -7,7 +7,9 @@
     <title>Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Laila:wght@300;400;500;600;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Laila:wght@300;400;500;600;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+PL:wght@100..400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="Gallery.css">
 
 </head>
@@ -15,31 +17,33 @@
 <body>
     <section class="header">
         <nav>
-            <div class="menu-toggle">
+            <div class="menu-toggle" aria-label="Toggle Navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <a href="index.html" class="logo"><img src="images\logo.jpg" alt=""></a>
+            <a href="index.html" class="logo"><img src="images/logo.jpg" alt="Logo"></a>
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="index.html">ABOUT</a></li>
                     <li><a href="Gallery.html">GALLERY</a></li>
                     <li><a href="Product_page_try.html">PRODUCT PAGE</a></li>
-                    <li><a href="Offers.html">SPECIAL OFFERS</a>
-                    <li><a href="Contact.html">CONTACT</a>
+                    <li><a href="Offers.html">SPECIAL OFFERS</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
-        
+
     </section>
-    <section><div class="text-box">
-        <h1>Photography Gallery</h1>
-        <p>Explore the beauty captured through my lens.</p>
-    </div></section>
+    <section>
+        <div class="text-box">
+            <h1>Photography Gallery</h1>
+            <p>Explore the beauty captured through my lens.</p>
+        </div>
+    </section>
     <section class="photo-gallery">
-        
+
         <h2>My Photographic Skills</h2>
         <p>Here are some of my favorite photographs showcasing my skills and passion for photography.</p>
         <div class="gallery-row">
@@ -75,7 +79,7 @@
                 <h3>Ocean Breeze</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-           
+
         </div>
         <div class="floating-squares">
             <!-- Add 20 floating squares -->
@@ -101,15 +105,14 @@
         </div>
     </section>
     <script>
-        // Select the toggle button and navigation links
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
-        // Toggle the active class on click
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
+
 
     </script>
 
