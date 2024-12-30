@@ -92,6 +92,16 @@
             </div>
 
         </div>
+        <div class="fixed-contact-btn" onclick="toggleContact()">
+            📞
+        </div>
+        <div class="fixed-contact" id="contactDiv">
+            <span class="close-btn" onclick="toggleContact()">✖</span>
+            <p>Call us at <strong>+91 8743887759</strong> to place your order or send us a message. We'll get back to you
+                shortly!</p>
+        </div>
+
+
     </section>
     <script>
         // Select the toggle button and navigation links
@@ -103,6 +113,15 @@
             menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
+        function toggleContact() {
+            const contactDiv = document.getElementById("contactDiv");
+            if (contactDiv.style.display === "none" || contactDiv.style.display === "") {
+                contactDiv.style.display = "block";
+            } else {
+                contactDiv.style.display = "none";
+            }
+        }
+
 
     </script>
     <footer>
@@ -113,6 +132,7 @@
 
     <!-- FontAwesome for Social Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </body>
 
 </html>

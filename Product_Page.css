@@ -336,3 +336,35 @@ footer {
 .contact-btn:hover {
     background-color: #e5533c;
 }
+
+/* General styling for the Buy Now button */
+.buy-btn {
+    display: inline-block;
+    background-color: #ff6f61; /* Attractive coral color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align text */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove borders */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Hover effect for the Buy Now button */
+.buy-btn:hover {
+    background-color: #4fe6e6; /* Darker coral shade on hover */
+    transform: scale(1.05); /* Slight scaling for hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Active effect for the Buy Now button */
+.buy-btn:active {
+    background-color: #cc5048; /* Even darker coral for click */
+    transform: scale(0.98); /* Slightly shrink when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for active state */
+}
+

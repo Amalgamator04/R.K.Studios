@@ -504,4 +504,118 @@ font-size: 14px;
         text-align: center;
     }
 }
-
+.fixed-contact-btn {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .fixed-contact {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+    z-index: 1000;
+  }
+  
+  .fixed-contact p {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .fixed-contact strong {
+    color: #ffd700; /* Gold color for the number */
+  }
+  
+  .fixed-contact:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+  }
+  
+  .fixed-contact:before {
+    content: "📞"; /* Adding a phone emoji for visual appeal */
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Close Button Styling */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .fixed-contact-btn {
+      padding: 12px;
+      font-size: 20px;
+    }
+  
+    .fixed-contact {
+      width: 200px;
+      font-size: 14px;
+      padding: 15px;
+    }
+  
+    .fixed-contact strong {
+      font-size: 14px;
+    }
+  
+    .fixed-contact:before {
+      font-size: 20px;
+    }
+  
+    .close-btn {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fixed-contact-btn {
+      padding: 10px;
+      font-size: 18px;
+    }
+  
+    .fixed-contact {
+      width: 170px;
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .fixed-contact strong {
+      font-size: 12px;
+    }
+  
+    .fixed-contact:before {
+      font-size: 18px;
+    }
+  
+    .close-btn {
+      font-size: 16px;
+    }
+  }
+  

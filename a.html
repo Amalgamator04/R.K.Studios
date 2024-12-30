@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            width: 30%;
+            display: inline-block;
+            margin: 15px;
+            vertical-align: top;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .product-card .details {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-card .details h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .product-card .details p {
+            color: #666;
+            font-size: 14px;
+        }
+        .product-card .details .price {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card .details button {
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .product-card .details button:hover {
+            background: #0056b3;
+        }
+        #cart {
+            margin: 20px auto;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #cart h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-align: center;
+        }
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #cart ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+        #cart ul li:last-child {
+            border: none;
+        }
+        #cart ul li button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #cart ul li button:hover {
+            background: darkred;
+        }
+        #cart .total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .payment-form {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .payment-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .payment-form button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .payment-form button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Product Cards -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 1">
+            <div class="details">
+                <h3>Product 1</h3>
+                <p>Short description of product 1.</p>
+                <div class="price">$20.00</div>
+                <button onclick="addToCart('Product 1', 20)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 2">
+            <div class="details">
+                <h3>Product 2</h3>
+                <p>Short description of product 2.</p>
+                <div class="price">$35.00</div>
+                <button onclick="addToCart('Product 2', 35)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 3">
+            <div class="details">
+                <h3>Product 3</h3>
+                <p>Short description of product 3.</p>
+                <div class="price">$15.00</div>
+                <button onclick="addToCart('Product 3', 15)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <div class="total">Total: $<span id="total-price">0</span></div>
+            <button onclick="showPaymentForm()">Proceed to Payment</button>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="payment-form" id="payment-form">
+            <h2>Payment</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="expiry" placeholder="Expiry (MM/YY)" required>
+            <input type="text" id="cvv" placeholder="CVV" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <button onclick="submitPayment()">Pay Now</button>
+        </div>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalPrice = document.getElementById('total-price');
+
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const li = document.createElement('li');
+                li.innerHTML = `${item.product} - $${item.price} <button onclick="removeFromCart(${index})">Remove</button>`;
+                cartItems.appendChild(li);
+            });
+
+            totalPrice.textContent = total;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function showPaymentForm() {
+            document.getElementById('payment-form').style.display = 'block';
+        }
+
+        function submitPayment() {
+            alert('Payment Submitted!');
+        }
+    </script>
+</body>
+</html>
