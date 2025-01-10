@@ -7,13 +7,15 @@
     <title>Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Laila:wght@300;400;500;600;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="Product_Page.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Laila:wght@300;400;500;600;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+PL:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Product_Page.css">
 </head>
 
 <body>
     <section class="header">
-        
+
         <nav>
             <div class="menu-toggle">
                 <span></span>
@@ -124,14 +126,67 @@
                 <a href="Contact.html" class="buy-btn" onclick="redirectToContact(this)">Buy Now</a>
             </div>
         </div>
-        
+
+    </section>
+
+    <!-- Customized wallets section -->
+    <section class="section-wallets hidden" id="wallets">
+        <h2>Customized Wallets</h2>
+        <p>Stylish wallets personalized just for you or your loved ones.</p>
+        <div class="container">
+            <div class="product">
+                <img src="images\Wallet.jpg" alt="Customized Wallet 1"
+                    style="width: 170%; height: auto; display: block; margin: 0 auto;">
+                <p>Classic Leather Wallet</p>
+                <a href="Contact.html" class="buy-btn" onclick="redirectToContact(this)">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customized Bracelets Section -->
+    <section class="section-bracelets hidden" id="bracelets">
+        <h2>Customized Bracelets</h2>
+        <p>Elegant bracelets engraved with your name or special message.</p>
+        <div class="container">
+            <div class="product">
+                <img src="images/Bracelet.jpg" alt="Customized Bracelet 1" style="width: 300px; height:200px">
+                <p>Metal Name Bracelet</p>
+                <a href="Contact.html" class="buy-btn" onclick="redirectToContact(this)">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customized Bottles Section -->
+    <section class="section-bottles hidden" id="bottles">
+        <h2>Customized Bottles</h2>
+        <p>Eco-friendly bottles personalized with names or designs.</p>
+        <div class="container">
+            <div class="product">
+                <img src="images/Temp bottle.jpg" alt="Customized Bottle 1" style="width: 300px; height:200px">
+                <p>Insulated Bottle</p>
+                <a href="Contact.html" class="buy-btn" onclick="redirectToContact(this)">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customized GoldFlak Combo Section -->
+    <section class="section-GoldFlak hidden" id="GoldFlakCombo">
+        <h2>Gold Flak Combo</h2>
+        <p>Exclusive gold flak pen and keychain combo for a touch of luxury.</p>
+        <div class="container">
+            <div class="product">
+                <img src="images/GoldFlakCombo.jpg" alt="Customized Bottle 1" style="width: 300px; height:200px">
+                <p>Gold Flak Pen & Keychain Combo</p>
+                <a href="Contact.html" class="buy-btn" onclick="redirectToContact(this)">Buy Now</a>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Photo Products. All rights reserved.</p>
     </footer>
-   
-    
+
+
     <script>
         const sections = document.querySelectorAll('section.hidden');
 
@@ -148,46 +203,47 @@
             observer.observe(section);
         });
         function redirectToContact(button) {
-        // Get the product name from the sibling <p> tag
-        const productName = button.parentElement.querySelector('.product-name').innerText;
-        // Redirect to the contact page with the product name in the query string
-        window.location.href = `Contact.html?product=${encodeURIComponent(productName)}`;
-    }
+            // Get the product name from the sibling <p> tag
+            const productName = button.parentElement.querySelector('.product-name').innerText;
+            // Redirect to the contact page with the product name in the query string
+            window.location.href = `Contact.html?product=${encodeURIComponent(productName)}`;
+        }
     </script>
- <div class="floating-squares">
-    <!-- Add 20 floating squares -->
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-</div>
-<script>const navToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-    
+    <div class="floating-squares">
+        <!-- Add 20 floating squares -->
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <script>const navToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
     </script>
-     <section class="contact-us">
+    <section class="contact-us">
         <div class="contact-container">
             <h2>Contact Us</h2>
-            <p>Have questions or need more information? We're here to help! Reach out to us, and our team will get back to you as soon as possible.</p>
+            <p>Have questions or need more information? We're here to help! Reach out to us, and our team will get back
+                to you as soon as possible.</p>
             <a href="Contact.html" class="contact-btn">Get in Touch</a>
         </div>
     </section>
